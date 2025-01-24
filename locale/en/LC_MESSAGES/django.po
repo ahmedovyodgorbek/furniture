@@ -1,0 +1,315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-21 13:58+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blogs\models.py:11 .\blogs\models.py:27 .\blogs\models.py:57
+#: .\shop\models.py:23 .\shop\models.py:60
+msgid "title"
+msgstr ""
+
+#: .\blogs\models.py:16 .\shop\models.py:26
+msgid "parent"
+msgstr ""
+
+#: .\blogs\models.py:22 .\shop\models.py:33
+msgid "category"
+msgstr ""
+
+#: .\blogs\models.py:23 .\blogs\models.py:63 .\shop\models.py:34
+#: .\shop\models.py:79
+msgid "categories"
+msgstr ""
+
+#: .\blogs\models.py:33 .\shop\models.py:38 .\shop\models.py:44
+#: .\shop\models.py:71
+msgid "tag"
+msgstr ""
+
+#: .\blogs\models.py:34 .\blogs\models.py:65 .\shop\models.py:45
+msgid "tags"
+msgstr ""
+
+#: .\blogs\models.py:38
+msgid "first_name"
+msgstr ""
+
+#: .\blogs\models.py:39
+msgid "last_name"
+msgstr ""
+
+#: .\blogs\models.py:40
+msgid "avatar"
+msgstr ""
+
+#: .\blogs\models.py:51 .\blogs\models.py:61
+msgid "author"
+msgstr ""
+
+#: .\blogs\models.py:52
+msgid "authors"
+msgstr ""
+
+#: .\blogs\models.py:56
+msgid "image"
+msgstr ""
+
+#: .\blogs\models.py:58 .\shop\models.py:64
+msgid "description"
+msgstr ""
+
+#: .\blogs\models.py:71 .\blogs\models.py:81
+msgid "blog"
+msgstr ""
+
+#: .\blogs\models.py:72
+msgid "blogs"
+msgstr ""
+
+#: .\blogs\models.py:76 .\blogs\models.py:87
+#: .\templates\blogs\blog-detail.html:75 .\templates\blogs\blog-list.html:71
+msgid "comment"
+msgstr ""
+
+#: .\blogs\models.py:78
+msgid "user"
+msgstr ""
+
+#: .\blogs\models.py:88
+msgid "comments"
+msgstr ""
+
+#: .\pages\models.py:8
+msgid "full name"
+msgstr ""
+
+#: .\pages\models.py:10
+msgid "subject"
+msgstr ""
+
+#: .\pages\models.py:11
+msgid "message"
+msgstr ""
+
+#: .\pages\models.py:17
+msgid "contact"
+msgstr ""
+
+#: .\pages\models.py:18
+msgid "contacts"
+msgstr ""
+
+#: .\shop\models.py:11
+msgid "code"
+msgstr ""
+
+#: .\shop\models.py:12
+msgid "name"
+msgstr ""
+
+#: .\shop\models.py:18 .\shop\models.py:68
+msgid "color"
+msgstr ""
+
+#: .\shop\models.py:19
+msgid "colors"
+msgstr ""
+
+#: .\shop\models.py:49 .\shop\models.py:55 .\shop\models.py:74
+#: .\templates\shop\product-detail.html:437
+msgid "size"
+msgstr ""
+
+#: .\shop\models.py:56
+msgid "sizes"
+msgstr ""
+
+#: .\shop\models.py:61
+msgid "image1"
+msgstr ""
+
+#: .\shop\models.py:62
+msgid "image2"
+msgstr ""
+
+#: .\shop\models.py:63
+msgid "price"
+msgstr ""
+
+#: .\shop\models.py:66
+msgid "instock"
+msgstr ""
+
+#: .\shop\models.py:86
+msgid "product"
+msgstr ""
+
+#: .\shop\models.py:87
+msgid "products"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:35 .\templates\blogs\blog-list.html:36
+msgid "Categories"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:66 .\templates\blogs\blog-list.html:62
+#: .\templates\blogs\blog-list.html:114
+msgid "Recent Posts"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:83 .\templates\blogs\blog-list.html:79
+msgid "READ MORE"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:94
+msgid "Blog Tags"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:129 .\templates\blogs\blog-list.html:127
+msgid "ago"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:130 .\templates\blogs\blog-list.html:128
+msgid "Comments"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:90
+msgid "Blog tags"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:136
+msgid "view more"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:33
+msgid "Search"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:110
+#: .\templates\layouts\header-home.html:99
+msgid "Home"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:116
+#: .\templates\layouts\header-home.html:106
+msgid "Shop"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:119
+#: .\templates\layouts\header-home.html:109
+msgid "About"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:122
+#: .\templates\layouts\header-home.html:112
+msgid "Contact US"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:144
+msgid "Settings"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:158
+#: .\templates\layouts\header-home.html:126
+#: .\templates\layouts\header-home.html:136
+msgid "My Account"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:165
+#: .\templates\layouts\header-home.html:143
+msgid "Sign in"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:172
+#: .\templates\layouts\header-home.html:150
+msgid "Register Account"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:184
+#: .\templates\layouts\header-home.html:162
+msgid "My Wishlists"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:233
+msgid "Organic Strawberry Fruits"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:71
+msgid "Total"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:155
+#: .\templates\layouts\header-home.html:350
+msgid "Checkout"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:275
+msgid "FREE DELIVERY"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:276
+msgid "From $ 250"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:288
+msgid ""
+"\n"
+"                                        <div>MONEY BACK</div>\n"
+"                                        <div>GUARANTEED</div>\n"
+"                                        "
+msgstr ""
+
+#: .\templates\layouts\header-home.html:349
+msgid "View Cart"
+msgstr ""
+
+#: .\templates\pages\contact.html:35
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\pages\contact.html:134
+msgid "Send message"
+msgstr ""
+
+#: .\templates\shop\product-detail.html:425
+msgid "Availability"
+msgstr ""
+
+#: .\templates\shop\product-detail.html:428
+msgid "IN STOCK"
+msgstr ""
+
+#: .\templates\shop\product-detail.html:430
+msgid "Not Available"
+msgstr ""
+
+#: .\templates\shop\product-detail.html:439
+msgid "Choose your size"
+msgstr ""
+
+#: .\templates\shop\product-detail.html:446
+msgid "Color"
+msgstr ""
+
+#: .\templates\shop\product-detail.html:504
+msgid "READ REVIEWS"
+msgstr ""
+
+#: .\templates\shop\product-detail.html:510
+msgid "WRITE A REVIEW"
+msgstr ""
