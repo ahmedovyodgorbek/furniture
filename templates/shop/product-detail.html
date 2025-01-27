@@ -371,40 +371,20 @@ id="product-detail"
                                                                                     <div>
                                                                                         <div class="images-container">
                                                                                             <div class="js-qv-mask mask tab-content">
-                                                                                                <div id="modal-item1" class="tab-pane fade active in show">
-                                                                                                    <img src="{% static 'img/product/1.jpg' %}" alt="img">
+                                                                                                {% for img in pr.images.all %}
+                                                                                                    <div id="modal-item{{ forloop.counter }}" class="tab-pane fade {% if forloop.counter == 1%}active in show{% endif %}">
+                                                                                                    <img src="{{ img.image.url }}" alt="img">
                                                                                                 </div>
-                                                                                                <div id="modal-item2" class="tab-pane fade">
-                                                                                                    <img src="{% static 'img/product/2.jpg' %}" alt="img">
-                                                                                                </div>
-                                                                                                <div id="modal-item3" class="tab-pane fade">
-                                                                                                    <img src="{% static 'img/product/3.jpg' %}" alt="img">
-                                                                                                </div>
-                                                                                                <div id="modal-item4" class="tab-pane fade">
-                                                                                                    <img src="{% static 'img/product/5.jpg' %}" alt="img">
-                                                                                                </div>
+                                                                                                {% endfor %}
                                                                                             </div>
                                                                                             <ul class="product-tab nav nav-tabs">
-                                                                                                <li class="active">
-                                                                                                    <a href="#modal-item1" data-toggle="tab" class=" active show">
-                                                                                                        <img src="{% static 'img/product/1.jpg' %}" alt="img">
+                                                                                                {% for img in pr.images.all %}
+                                                                                                <li {% if forloop.counter ==  1 %}class="active"{% endif %}>
+                                                                                                    <a href="#modal-item{{ forloop.counter }}" data-toggle="tab" {% if forloop.counter == 1 %} class=" active show"{% endif %}>
+                                                                                                        <img src="{{ img.image.url }}" alt="img">
                                                                                                     </a>
                                                                                                 </li>
-                                                                                                <li>
-                                                                                                    <a href="#modal-item2" data-toggle="tab">
-                                                                                                        <img src="{% static 'img/product/2.jpg' %}" alt="img">
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="#modal-item3" data-toggle="tab">
-                                                                                                        <img src="{% static 'img/product/3.jpg' %}" alt="img">
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="#modal-item4" data-toggle="tab">
-                                                                                                        <img src="{% static 'img/product/5.jpg' %}" alt="img">
-                                                                                                    </a>
-                                                                                                </li>
+                                                                                                {% endfor %}
                                                                                             </ul>
                                                                                         </div>
                                                                                     </div>
@@ -427,6 +407,7 @@ id="product-detail"
                                                                     {% if pr.instock %}
                                                                     <i class="fa fa-check-square-o" aria-hidden="true"></i>{% trans 'IN STOCK' %}</span>
                                                                     {% else %}
+                                                                <span style="color:red" class="check">
                                                                     <i class="fa fa-times-circle-o" aria-hidden="true"></i>{% trans 'Not Available' %}</span>
                                                                     {% endif %}
                                                             </span>

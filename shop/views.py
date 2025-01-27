@@ -83,3 +83,11 @@ class ProductDetailView(DetailView):
 
         context['related_products'] = related_products
         return context
+
+
+class WishTemplateView(TemplateView):
+    template_name = 'shop/user-wishlist.html'
+
+
+class CartTemplateView(TemplateView):
+    template_name = 'shop/product-cart.html'
