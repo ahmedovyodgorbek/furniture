@@ -1,15 +1,9 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
 {% load i18n %}
-{% block title %}Register{% endblock %}
+{% block title %}My Account{% endblock %}
 {% block body %}class="user-register blog"{% endblock %}
 {% block content %}
-{% for msg in messages %}
-        <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-            <strong>Hey! </strong>{{ msg }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    {% endfor %}
     <div class="main-content">
     <div class="wrap-banner">
 
@@ -19,13 +13,13 @@
                 <div class="breadcrumb">
                     <ol>
                         <li>
-                            <a href="#">
+                            <a href="{% url 'pages:home' %}">
                                 <span>Home</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span>About us</span>
+                                <span>My Account</span>
                             </a>
                         </li>
                     </ol>
@@ -42,56 +36,44 @@
                     <div id="main">
                         <div id="content" class="page-content">
                             <div class="register-form text-center">
-                                <h1 class="text-center title-page">Create Account</h1>
-                                <form action="{% url 'users:register' %}" id="customer-form" class="js-customer-form" method="post">
+                                <h1 class="text-center title-page">{% trans 'Update Account' %}</h1>
+                                <form action="{% url 'users:account' %}" id="customer-form" class="js-customer-form" method="post">
                                     {% csrf_token %}
                                     <div>
                                         <div class="form-group">
                                             <div>
-                                                <input class="form-control" name="first_name" type="text"
+                                                <input value="{{ user.first_name }}" class="form-control" name="first_name" type="text"
                                                        placeholder="First name">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div>
-                                                <input class="form-control" name="last_name" type="text"
+                                                <input value="{{ user.last_name }}" class="form-control" name="last_name" type="text"
                                                        placeholder="Last name">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div>
-                                                <input class="form-control" name="email" type="email"
+                                                <input value="{{ user.email }}" class="form-control" name="email" type="email"
                                                        placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div>
-                                                <input class="form-control" name="username" type="text"
+                                                <input value="{{ user.username }}" class="form-control" name="username" type="text"
                                                        placeholder="Username">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div>
-                                                <div class="input-group js-parent-focus">
-                                                    <input class="form-control js-child-focus js-visible-password"
-                                                           name="password1" type="password" placeholder="Password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div>
-                                                <div class="input-group js-parent-focus">
-                                                    <input class="form-control js-child-focus js-visible-password"
-                                                           name="password2" type="password" placeholder="Confirm Password">
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="clearfix">
                                         <div>
                                             <button class="btn btn-primary" data-link-action="sign-in" type="submit">
-                                                Create Account
+                                                Update Account
                                             </button>
+                                                <a href="{% url 'users:update-password' %}" class="btn btn-primary">
+                                                Change Password
+                                                </a>
+
                                         </div>
                                     </div>
                                 </form>
