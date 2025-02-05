@@ -1,9 +1,8 @@
 from django.db.models import Q
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView
 
 from . import models
-from .models import ProductModel
+from .models import ProductModel, ProductCategoryModel, ProductTagModel
 
 
 class ProductsListView(ListView):
@@ -81,5 +80,10 @@ class ProductDetailView(DetailView):
 
         related_products = ProductModel.objects.filter(categories__in=categories).exclude(id=product.id).distinct()
 
+        categories = ProductCategoryModel.objects.all()
+        tags = ProductTagModel.objects.all()[:10]
+
         context['related_products'] = related_products
+        context['categories'] = categories
+        context['tags'] = tags
         return context

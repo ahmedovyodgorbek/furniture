@@ -119,21 +119,23 @@
                                                         <ul>
                                                             {% if page_obj.has_previous %}
                                                                 <li>
-                                                                    <a rel="prev" href="#" class="previous disabled js-search-link">
+                                                                    <a rel="prev"
+                                                                       href="?page={{ page_obj.previous_page_number }}"
+                                                                       class="previous disabled js-search-link">
                                                                         Previous
                                                                     </a>
                                                                 </li>
                                                             {% endif %}
-                                                            {% for product in products %}
-                                                                <li {% if forloop.counter=1 %}class="current active">{% endif %}
-                                                                    <a rel="nofollow" href="#" class="disabled js-search-link">
-                                                                        1
+                                                            {% for page in page_obj.paginator.page_range %}
+                                                                <li class="current {% if page_obj.number == page %}active{% endif %}">
+                                                                    <a rel="nofollow" href="?page={{ page }}" class="disabled js-search-link">
+                                                                        {{ page }}
                                                                     </a>
                                                                 </li>
                                                             {% endfor %}
                                                             {% if page_obj.has_next %}
                                                                 <li>
-                                                                    <a rel="next" href="#" class="next disabled js-search-link">
+                                                                    <a rel="next" href="?page={{ page_obj.next_page_number }}" class="next disabled js-search-link">
                                                                         Next
                                                                     </a>
                                                                 </li>

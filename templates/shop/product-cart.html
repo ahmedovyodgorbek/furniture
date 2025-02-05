@@ -32,22 +32,23 @@
                                     <div class="cart-container">
                                         <div class="cart-overview js-cart">
                                             <ul class="cart-items">
+                                                {% for product in products %}
                                                 <li class="cart-item">
                                                     <div class="product-line-grid row justify-content-between">
                                                         <!--  product left content: image-->
                                                         <div class="product-line-grid-left col-md-2">
                                                             <span class="product-image media-middle">
                                                                 <a href="product-detail.html">
-                                                                    <img class="img-fluid" src="{% static 'img/product/3.jpg' %}" alt="Organic Strawberry Fruits">
+                                                                    <img class="img-fluid" src="{{ product.image1.url }}" alt="Organic Strawberry Fruits">
                                                                 </a>
                                                             </span>
                                                         </div>
                                                         <div class="product-line-grid-body col-md-6">
                                                             <div class="product-line-info">
-                                                                <a class="label" href="product-detail.html" data-id_customization="0">Organic Strawberry Fruits</a>
+                                                                <a class="label" href="product-detail.html" data-id_customization="0">{{ product.title }}</a>
                                                             </div>
                                                             <div class="product-line-info product-price">
-                                                                <span class="value">£20.00</span>
+                                                                <span class="value">£{{ product.price }}</span>
                                                             </div>
                                                             <div class="product-line-info">
                                                                 <span class="label-atrr">Size:</span>
@@ -92,10 +93,11 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                {% endfor %}
                                             </ul>
                                         </div>
                                     </div>
-                                    <a href="product-checkout.html" class="continue btn btn-primary pull-xs-right">
+                                    <a href="{% url 'orders:checkout' %}" class="continue btn btn-primary pull-xs-right">
                                         Continue
                                     </a>
                                 </div>
@@ -103,8 +105,14 @@
                                     <div class="cart-summary">
                                         <div class="cart-detailed-totals">
                                             <div class="cart-summary-products">
-                                                <div class="summary-label">There are 3 item in your cart</div>
+                                                <div class="summary-label">
+                                                    {% if products.count > 0 %}
+                                                    There are 3 item(s) in your cart
+                                                    {% else %}
+                                                    Your cart is empty
+                                                    {% endif %}</div>
                                             </div>
+                                            {% if products.count > 0 %}
                                             <div class="cart-summary-line" id="cart-subtotal-products">
                                                 <span class="label js-subtotal">
                                                     Total products:
@@ -124,6 +132,7 @@
                                                 <span class="label">Total:</span>
                                                 <span class="value">£200.00 (tax incl.)</span>
                                             </div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     <div id="block-reassurance">

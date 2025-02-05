@@ -77,7 +77,7 @@
                                     <td colspan="3" class="d-flex justify-content-center">
                                         <div class="cart-button">
                                             <a href="{% url 'orders:cart' %}" title="View Cart">View Cart</a>
-                                            <a href="product-checkout.html" title="Checkout">Checkout</a>
+                                            <a href="{% url 'orders:checkout' %}" title="Checkout">Checkout</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -142,7 +142,11 @@
                         <div class="myaccount-title ">
                             <a href="#acount" data-toggle="collapse" class="acount">
                                 <i class="fa fa-user" aria-hidden="true"></i>
+                                {% if request.user.is_authenticated %}
                                 <span>{% trans 'Settings' %}</span>
+                                {% else %}
+                                <span>{% trans 'Account' %}</span>
+                                {% endif %}
                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
 
@@ -174,7 +178,7 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a class="check-out" href="product-checkout.html" rel="nofollow" title="Checkout">
+                                    <a class="check-out" href="{% url 'orders:checkout' %}" rel="nofollow" title="Checkout">
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                         <span>Checkout</span>
                                     </a>
@@ -258,7 +262,7 @@
                                             <td colspan="3" class="d-flex justify-content-center">
                                                 <div class="cart-button">
                                                     <a href="{% url 'orders:cart' %}" title="View Cart">View Cart</a>
-                                                    <a href="product-checkout.html" title="Checkout">Checkout</a>
+                                                    <a href="{% url 'orders:checkout' %}" title="Checkout">Checkout</a>
                                                 </div>
                                             </td>
                                         </tr>

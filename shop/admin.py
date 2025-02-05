@@ -15,6 +15,7 @@ class ProductModelAdmin(MyTranslationAdmin):
     list_filter = ['created_at', 'price', 'title', 'categories', 'sizes', 'colors']
     ordering = ['-created_at']
     inlines = [ProductImageModelAdmin]
+    readonly_fields = ['discount_price']
 
 
 @admin.register(models.ColorModel)

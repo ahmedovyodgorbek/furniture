@@ -72,14 +72,15 @@ class ProductModel(BaseModel):
     image1 = models.ImageField(upload_to='products', verbose_name=_('image1'))
     image2 = models.ImageField(upload_to='products', verbose_name=_('image2'))
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name=_('price'))
+    discount_price = models.DecimalField(max_digits=10, decimal_places=2,
+                                         verbose_name=_('discount price'),
+                                         null=True, blank=True)
+    discount = models.SmallIntegerField(verbose_name=_('discount'), null=True, blank=True)
+
     description = models.TextField(verbose_name=_('description'))
     sku = models.CharField(max_length=128)
     instock = models.BooleanField(default=True, verbose_name=_('instock'))
     quantity = models.PositiveSmallIntegerField(verbose_name=_('quantity'))
-    discount = models.SmallIntegerField(verbose_name=_('discount'), null=True, blank=True)
-    discount_price = models.DecimalField(max_digits=10, decimal_places=2,
-                                         verbose_name=_('discount price'),
-                                         null=True, blank=True)
 
     colors = models.ManyToManyField(ColorModel, verbose_name=_('color'),
                                     related_name='products'
